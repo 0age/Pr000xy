@@ -629,8 +629,7 @@ module.exports = {test: async function (provider, testingContext) {
   const Pr000xy = await Pr000xyDeployer.deploy({
     data: Pr000xyArtifact.bytecode,
     arguments: [
-      //Pr000xyRewards.options.address,
-      '0x749DA89712DC88284Fc35712c06eAC88Dd749e01',
+      Pr000xyRewards.options.address,
       UpgradeableArtifact.bytecode
     ]
   }).send({
@@ -651,9 +650,8 @@ module.exports = {test: async function (provider, testingContext) {
   )
   passed++
 
-  code = await web3.eth.getCode(Pr000xy.options.address)
-  console.log(code)
-  process.exit(1)
+  //code = await web3.eth.getCode(Pr000xy.options.address)
+  //console.log(code)
 
   const InitializeableImplementationDeployer = new web3.eth.Contract(InitializeableImplementationArtifact.abi)
 
