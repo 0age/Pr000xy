@@ -48,6 +48,7 @@ In a new terminal window, start the testRPC, run tests, and tear down the testRP
 $ yarn start
 $ yarn test
 $ yarn linter
+$ yarn verify # check contract source code against Ropsten contract
 $ yarn stop
 ```
 
