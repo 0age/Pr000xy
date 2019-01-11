@@ -2,8 +2,10 @@
 
 ![banner](images/Pr000xyBanner.gif)
 
+![GitHub](https://img.shields.io/github/license/0age/Pr000xy.svg?colorB=brightgreen)
 [![Build Status](https://travis-ci.org/0age/Pr000xy.svg?branch=master)](https://travis-ci.org/0age/Pr000xy)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 > `Pr000xy` - a public utility ERC20 for creating & claiming transparent proxies with gas-efficient addresses (i.e. with extra zero bytes) as well as with custom vanity addresses.
 
