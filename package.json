@@ -1,0 +1,25 @@
+{
+  "name": "Pr000xy",
+  "version": "0.1.0",
+  "description": "Pr000xy - a public utility ERC20 for creating & claiming transparent proxies with gas-efficient addresses (or addresses with extra zero bytes) as well as with custom vanity addresses.",
+  "author": "0age",
+  "license": "MIT",
+  "dependencies": {
+    "decimal.js": "^10.0.1",
+    "ethereumjs-util": "^6.0.0",
+    "solhint": "^1.4.1",
+    "truffle": "5.0.0",
+    "web3": "^1.0.0-beta.37",
+    "workerpool": "^3.0.0"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/truffle compile",
+    "ci": "docker run -d --name Pr000xyTestRPC -p 8545:8545 ethereum/client-go --dev --rpc --rpcaddr 0.0.0.0 && ./node_modules/.bin/truffle compile && node scripts/test/ci.js && ./node_modules/.bin/solhint 'contracts/**/*.sol'; docker stop Pr000xyTestRPC; docker rm Pr000xyTestRPC",
+    "linter": "./node_modules/.bin/solhint 'contracts/**/*.sol'",
+    "mine": "node scripts/mine/Pr000xy.js",
+    "start": "docker run -d --name Pr000xyTestRPC -p 8545:8545 ethereum/client-go --dev --rpc --rpcaddr 0.0.0.0",
+    "stop": "docker stop Pr000xyTestRPC; docker rm Pr000xyTestRPC",
+    "test": "./node_modules/.bin/truffle compile && node scripts/test/ci.js",
+    "verify": "node scripts/verifyContractCode.js"
+  }
+}
