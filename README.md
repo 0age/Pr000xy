@@ -43,7 +43,7 @@ $ yarn build
 ```
 
 ## Usage
-In a new terminal window, start the testRPC, run tests, and tear down the testRPC *(you can do all of this at once via* `yarn ci` *if you prefer)*:
+In a new terminal window, start the testRPC, run tests, and tear down the testRPC *(you can do all of this at once via* `yarn all` *if you prefer)*:
 ```sh
 $ yarn start
 $ yarn test

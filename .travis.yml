@@ -15,6 +15,10 @@ before_install:
 install:
   - yarn install
 script:
-  - yarn ci
+  - yarn build
+  - yarn start
+  - yarn test
+  - yarn linter
+  - yarn stop
 cache:
   yarn: true
