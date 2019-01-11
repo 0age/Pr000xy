@@ -353,12 +353,12 @@ module.exports = {test: async function (provider, testingContext) {
       leading = 20;
     }
 
-    return [total, leading]
+    return [leading, total]
   }
 
   function getReward(zeroes) {
-    total = zeroes[0]
-    leading = zeroes[1]
+    leading = zeroes[0]
+    total = zeroes[1]
 
     rewards = {
       '5': '4',
@@ -889,7 +889,7 @@ module.exports = {test: async function (provider, testingContext) {
     total => {
       assert.strictEqual(total, '1')
     }
-  )  
+  )
 
   await runTest(
     'proxy address can be retrieved by zeroes and index',
@@ -1678,6 +1678,8 @@ module.exports = {test: async function (provider, testingContext) {
   // offer can be cancelled by offerer once it has expired (with refund paid)
 
   // check for cancelled offer details shows that it no longer exists
+
+  // check batch functions
 
   console.log(
     `completed ${passed + failed} test${passed + failed === 1 ? '' : 's'} ` +
