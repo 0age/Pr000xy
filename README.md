@@ -13,10 +13,10 @@
 
 **DISCLAIMER: DO NOT HODL THIS TOKEN! `Pr000xy` may *technically* be an ERC20 token, but makes for a TERRIBLE "investment" for a whole bunch of reasons, such as:**
 * The **code is unaudited, mostly untested, and highly experimental**, and so **should not be considered secure** by any measure (this goes for placing offers as well - don't put up any offer that you're not prepared to lose),
-* The token itself is **highly deflationary**, meaning that it will **almost certainly decrease in value** as address mining becomes more efficient,
+* The token itself is **highly deflationary**, meaning that it will **almost certainly decrease in value** as address mining becomes more efficient (especially as GPU and ASIC address miners are developed),
 * The token's value will be **highly volatile** and **total supply will fluctuate greatly**, as creation of new, comparatively rare addresses will issue a massive number of tokens at once,
 * The token will be **vulnerable to "shadow mining"**, where miners can wait to submit discovered addresses and instead submit a large group all at once, making it a target for manipulation,
-* The **token contract itself will likely become obsolete** as better methods for discovering CREATE2 addresses become available (including GPU mining and ASICs) and new versions or competing solutions come online... and no, there will be **no way to "convert your tokens to the new version"**, because
+* The **token contract itself will likely become obsolete** as better methods for discovering CREATE2 addresses become available and new versions or competing solutions come online... and no, there will be **no way to "convert your tokens to the new version"**, because
 * There's **no organization, group, collective, or whatever backing the tokens**, and they're **not a claim on any asset, voting right, share, or anything at all** except for that they can be burned in order to take ownership of an unclaimed upgradeable proxy of equivalent value.
 
 **TO REITERATE: this is an experiment and should NOT be considered an investment of any kind! There is no ICO or token sale - don't be a giver-of-ETH to a scammer.**
