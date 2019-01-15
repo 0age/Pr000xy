@@ -55,6 +55,7 @@ $ yarn verify # check contract source code against Ropsten contract
 $ yarn stop
 ```
 
+There's also a basic script to mine `Pr000xy` (on Ropsten), available via `$ yarn mine $CALLER_ADDRESS`.
 
 ## API
 
