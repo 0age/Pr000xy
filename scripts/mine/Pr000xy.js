@@ -8,7 +8,18 @@ Decimal.config(
   }
 )
 
-const address = '0x000000006b9b8C1aC1392B2f53f02FC9085EbD6B'
+var args = process.argv.slice(2)
+if (args.length === 0) {
+  console.error('Error: must supply the calling address an argument.')
+  process.exit(1)
+}
+
+if (!(util.isValidAddress(args[0]))) {
+  console.error('Error: invalid address argument.')
+  process.exit(1)
+}
+
+const address = util.toChecksumAddress(args[0])
 const RopstenPr000xyAddress = '0x000000009a9fc3ac5280bA0D3eA852E57DD2ac1b'
 const RopstenPr000xyInitHash = '0x112782ff5a98e1dc87d1eb49f1d499e5b065139bd000edbd7a80791598f622a4'
 const searchSpace = '0x111111111100000000000000000000000000000'
