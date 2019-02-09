@@ -594,23 +594,25 @@ module.exports = {test: async function (provider, testingContext) {
 
   deployGas = await getDeployGas(dataPayload)
 
+  await raiseGasLimit(7900001)
+
   const Pr000xyRewards = await Pr000xyRewardsDeployer.deploy({
     data: Pr000xyRewardsArtifact.bytecode
   }).send({
     from: address,
-    gas: deployGas,
+    gas: 6000000, // estimateGas seems to be causing issues
     gasPrice: 10 ** 1
   }).catch(error => {
     console.error(error)
     console.log(
-      ` ✘ Pr000xyRewards contract deploys successfully for ${deployGas} gas`
+      ` ✘ Pr000xyRewards contract deploys successfully for ${6000000} gas`
     )
     failed++
     process.exit(1)
   })
 
   console.log(
-    ` ✓ Pr000xyRewards contract deploys successfully for ${deployGas} gas`
+    ` ✓ Pr000xyRewards contract deploys successfully for ${6000000} gas`
   )
   passed++
 
@@ -634,19 +636,19 @@ module.exports = {test: async function (provider, testingContext) {
     ]
   }).send({
     from: address,
-    gas: deployGas,
+    gas: 7900000, // estimateGas seems to be causing issues
     gasPrice: 10 ** 1
   }).catch(error => {
     console.error(error)
     console.log(
-      ` ✘ Pr000xy contract deploys successfully for ${deployGas} gas`
+      ` ✘ Pr000xy contract deploys successfully for ${7900000} gas`
     )
     failed++
     process.exit(1)
   })
 
   console.log(
-    ` ✓ Pr000xy contract deploys successfully for ${deployGas} gas`
+    ` ✓ Pr000xy contract deploys successfully for ${7900000} gas`
   )
   passed++
 
@@ -665,19 +667,19 @@ module.exports = {test: async function (provider, testingContext) {
     data: InitializeableImplementationArtifact.bytecode
   }).send({
     from: address,
-    gas: deployGas,
+    gas: 2000000,
     gasPrice: 10 ** 1
   }).catch(error => {
     console.error(error)
     console.log(
-      ` ✘ Initializeable Implementation contract deploys successfully for ${deployGas} gas`
+      ` ✘ Initializeable Implementation contract deploys successfully for ${2000000} gas`
     )
     failed++
     process.exit(1)
   })
 
   console.log(
-    ` ✓ Initializeable Implementation contract deploys successfully for ${deployGas} gas`
+    ` ✓ Initializeable Implementation contract deploys successfully for ${2000000} gas`
   )
   passed++
 
