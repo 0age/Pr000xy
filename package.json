@@ -14,10 +14,10 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/truffle compile",
-    "all": "docker run -d --name Pr000xyTestRPC -p 8545:8545 ethereum/client-go --dev --rpc --rpcaddr 0.0.0.0 && ./node_modules/.bin/truffle compile && node scripts/test/ci.js && ./node_modules/.bin/solhint 'contracts/**/*.sol'; docker stop Pr000xyTestRPC; docker rm Pr000xyTestRPC",
+    "all": "docker run -d --name Pr000xyTestRPC -p 8545:8545 ethereum/client-go:v1.8.22 --dev --rpc --rpcaddr 0.0.0.0 && ./node_modules/.bin/truffle compile && node scripts/test/ci.js && ./node_modules/.bin/solhint 'contracts/**/*.sol'; docker stop Pr000xyTestRPC; docker rm Pr000xyTestRPC",
     "linter": "./node_modules/.bin/solhint 'contracts/**/*.sol'",
     "mine": "node scripts/mine/Pr000xy.js",
-    "start": "docker run -d --name Pr000xyTestRPC -p 8545:8545 ethereum/client-go --dev --rpc --rpcaddr 0.0.0.0",
+    "start": "docker run -d --name Pr000xyTestRPC -p 8545:8545 ethereum/client-go:v1.8.22 --dev --rpc --rpcaddr 0.0.0.0",
     "stop": "docker stop Pr000xyTestRPC; docker rm Pr000xyTestRPC",
     "test": "./node_modules/.bin/truffle compile && node scripts/test/ci.js",
     "verify": "node scripts/verifyContractCode.js"
