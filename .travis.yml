@@ -6,7 +6,7 @@ services:
   - docker
 before_install:
   # geth (latest)
-  - docker pull ethereum/client-go
+  - docker pull ethereum/client-go:v1.8.22
   # yarn
   - sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
